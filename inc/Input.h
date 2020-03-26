@@ -1,6 +1,8 @@
 #ifndef INPUT_H
 #define INPUT_H
 
+#include <stdlib.h>
+
 #define INDEX(C) (C) - 'A'
 
 #define NOT_A_KEY -1
