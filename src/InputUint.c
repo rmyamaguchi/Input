@@ -22,7 +22,7 @@ static unsigned int uintPutKey(void * val, int key)
     return 1;
 }
 
-static unsigned int uintPopKey(void * val)
+static unsigned int uintDelKey(void * val)
 {
     if (UINT(val) == 0)
         return 0;
@@ -35,7 +35,7 @@ static void configUintInput(Input input)
 {
     setSprintF(input, uintSprintF);
     setPutKey(input, uintPutKey);
-    setPopKey(input, uintPopKey);
+    setDelKey(input, uintDelKey);
 }
 
 static void CONSTRUCTOR putIntConfig(void)

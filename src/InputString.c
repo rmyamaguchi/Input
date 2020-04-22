@@ -51,7 +51,7 @@ static unsigned int stringPutKey(void * val, int key)
     return ret;
 }
 
-static unsigned int stringPopKey(void * val)
+static unsigned int stringDelKey(void * val)
 {
     char *pEnd = strchr(STRING(val), '\0');
     prevKey = NOT_A_KEY;
@@ -67,7 +67,7 @@ static void configStringInput(Input input)
 {
     setSprintF(input, stringSprintF);
     setPutKey(input, stringPutKey);
-    setPopKey(input, stringPopKey);
+    setDelKey(input, stringDelKey);
 }
 
 static void CONSTRUCTOR putStringConfig(void)

@@ -31,7 +31,7 @@ int getInput(const char format[], void *val, size_t len)
             deleteInput(input);
             return key;
         case KBD_KEY_CLEAR:      /* Backspace */
-            runPopKey(input);
+            runDelKey(input);
             break;
         default:
             runPutKey(input, key, len);

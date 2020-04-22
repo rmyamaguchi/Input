@@ -13,7 +13,7 @@ struct InputDeref
     void *val;
     SprintFFun sprintF;
     PutKeyFun putKey;
-    PopKeyFun popKey;
+    DelKeyFun delKey;
 };
 
 /**
@@ -89,12 +89,12 @@ void runPutKey(Input input, int key, size_t len)
 }
 
 /**
- * @brief Run the configured popKey function.
+ * @brief Run the configured delKey function.
  */
-void runPopKey(Input input)
+void runDelKey(Input input)
 {
     if (input != NULL && input->cursor > 0)
-        input->cursor -= input->popKey(input->val);
+        input->cursor -= input->delKey(input->val);
 }
 
 /**
@@ -110,10 +110,10 @@ void setPutKey(Input input, PutKeyFun putKey)
     if (input != NULL)
         input->putKey = putKey;
 }
-void setPopKey(Input input, PopKeyFun popKey)
+void setDelKey(Input input, DelKeyFun delKey)
 {
     if (input != NULL)
-        input->popKey = popKey;
+        input->delKey = delKey;
 }
 
 /**

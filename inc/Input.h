@@ -44,10 +44,10 @@ void runSprintF(Input input, char *out);
 void runPutKey(Input input, int key, size_t len);
 
 /**
- * @brief Call the configured PopKey function
+ * @brief Call the configured DelKey function
  * 
  * @param[in,out] input Object from which the last character inserted is deleted
  */
-void runPopKey(Input input);
+void runDelKey(Input input);
 
 #endif /* INPUT_H */

@@ -9,7 +9,7 @@
 
 typedef void (*SprintFFun)(char *, const char[], void *);
 typedef unsigned int (*PutKeyFun)(void *, int);
-typedef unsigned int (*PopKeyFun)(void *);
+typedef unsigned int (*DelKeyFun)(void *);
 
 typedef void (*ConfigInputFun)(Input);
 
@@ -32,13 +32,13 @@ void setSprintF(Input input, SprintFFun sprintF);
 void setPutKey(Input input, PutKeyFun putKey);
 
 /**
- * @brief Set the PopKey function to be used
+ * @brief Set the DelKey function to be used
  * @note To be used by Input type implementations
  * 
  * @param[in,out] input Object to be edited
  * @param[in] sprintF Function to be addressed
  */
-void setPopKey(Input input, PopKeyFun popKey);
+void setDelKey(Input input, DelKeyFun delKey);
 
 /**
  * @brief Saves a configuration type for the Input to use
