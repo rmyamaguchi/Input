@@ -35,7 +35,7 @@ void runSprintF(Input input, char *out);
 
 /**
  * @brief Call the configured PutKey function
- * @warning For strings, pass strlen - 1 (keep '\0' in the end)
+ * @warning For strings, pass strlen (keep '\0' in the end)
  * 
  * @param[in,out] input Object to store the key
  * @param[in] key Numerical value to be translated and stored

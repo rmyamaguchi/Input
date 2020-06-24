@@ -3,8 +3,6 @@
 
 #include "Input.h"
 
-#define NOT_A_KEY -1
-
 #define CONSTRUCTOR __attribute__((constructor))
 
 typedef void (*SprintFFun)(char *, const char[], void *);

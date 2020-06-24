@@ -38,7 +38,7 @@ static void configUintInput(Input input)
     setDelKey(input, uintDelKey);
 }
 
-static void CONSTRUCTOR putIntConfig(void)
+static void CONSTRUCTOR putUintConfig(void)
 {
     putConfig(UINT_FORM, configUintInput);
 }

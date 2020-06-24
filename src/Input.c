@@ -80,7 +80,7 @@ void runSprintF(Input input, char *out)
 
 /**
  * @brief Run the configured putKey function.
- * @warning For strings, pass strlen - 1 (keep '\0' in the end)
+ * @warning For strings, pass strlen (keep '\0' in the end)
  */
 void runPutKey(Input input, int key, size_t len)
 {
